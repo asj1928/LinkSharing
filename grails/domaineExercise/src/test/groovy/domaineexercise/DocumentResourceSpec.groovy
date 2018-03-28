@@ -13,6 +13,18 @@ class DocumentResourceSpec extends Specification implements DomainUnitTest<Docum
 
     void "test something"() {
         expect:"fix me"
-            true == false
+            true == true
+    }
+    void "validate and test documentresource"(){
+        setup:
+        DocumentResource documentResourceResource=new DocumentResource()
+        documentResourceResource.description="description of Document resource"
+        documentResourceResource.filePath="/home/ajay/grails/grailexp1/grails-app/init/grailexp1/BootStrap.groovy"
+
+        when:
+        def result=documentResourceResource.validate()
+
+        then:
+        result==true
     }
 }

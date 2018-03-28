@@ -3,9 +3,10 @@ package domaineexercise
 class DocumentResource extends Resource{
     String filePath
     Date dateCreated
-    Date dateUpdated
+    Date lastUpdated
 
 
     static constraints = {
+        filePath nullable: false
     }
 }

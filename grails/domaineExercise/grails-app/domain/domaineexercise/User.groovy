@@ -10,13 +10,13 @@ class User {
     boolean admin
     boolean active
     Date dateCreated
-    Date dateUpdated
+    Date lastUpdated
     static hasMany = [topics:Topic,subscriptions:Subscription,readingItems:ReadingItem,resources:Resource]
 
 
     static constraints = {
         email(unique: true ,nullable: false,blank: false, email: true)
-        password(size: 5..20,nullable: false,blank: false)
+        password(size: 5..35,nullable: false,blank: false)
         firstName(nullable: false,blank: false)
         userName(nullable: false,blank: false)
         photo(nullable:true)

@@ -13,6 +13,16 @@ class TopicSpec extends Specification implements DomainUnitTest<Topic> {
 
     void "test something"() {
         expect:"fix me"
-            true == false
+            true == true
+    }
+    void "validate topic"(){
+        setup:
+        User user=new User(email: "asjodha@gmail.com",userName: "asj1928" ,password:"harry1928" ,firstName: "ajay")
+        Topic topic=new Topic(name: "topic1",createdBy: user,visibility:Visibility.PRIVATE)
+
+        when:
+            boolean result=topic.validate()
+        then:
+        result==true
     }
 }

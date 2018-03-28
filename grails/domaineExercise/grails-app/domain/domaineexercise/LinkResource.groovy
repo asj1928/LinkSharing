@@ -4,7 +4,7 @@ class LinkResource extends Resource{
     String url
 
     Date dateCreated
-    Date dateUpdated
+    Date lastUpdated
 
     static constraints = {
         url(url: true)

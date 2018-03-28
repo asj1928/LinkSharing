@@ -5,7 +5,7 @@ class Topic {
     String name
 //    User createdBy
     Date dateCreated
-    Date lastupdated
+    Date lastUpdated
 
     domaineexercise.Visibility visibility
 
